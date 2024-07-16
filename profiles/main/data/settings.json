@@ -260,6 +260,7 @@
     },
     "settingsSync.ignoredSettings": [],
     "diffEditor.hideUnchangedRegions.enabled": true,
-    "syncSettings.resources": ["extensions", "keybindings", "settings", "snippets", "uiState"],
+    "syncSettings.resources": ["keybindings", "settings", "snippets", "uiState"],
+    // "syncSettings.resources": ["extensions", "keybindings", "settings", "snippets", "uiState"],
     "syncSettings.keybindingsPerPlatform": true
 }
