@@ -1,0 +1,263 @@
+{
+    "remote.SSH.remotePlatform": {
+        "40.90.168.49": "linux",
+        "103.110.84.120": "linux",
+        "103.221.223.102": "linux",
+        "103.221.223.131": "linux",
+        "103.221.223.158": "linux",
+        "139.180.153.250": "linux",
+        "manjaro": "linux",
+        "innoVM": "linux",
+        "dell": "linux",
+        "innoVm": "linux",
+        "nas": "linux",
+        "gtd": "linux",
+        "mac": "macOS"
+    },
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "terminal.integrated.env.osx": {
+        "PYTHONPATH": "${env:PYTHONPATH}",
+    },
+    "terminal.integrated.env.linux": {
+        "PYTHONPATH": "${env:PYTHONPATH}",
+    },
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${env:PYTHONPATH}",
+    },
+    "python.defaultInterpreterPath": ".venv/bin/python",
+    "python.venvFolders": [
+        "${workspaceFolder}/.venv"
+    ],
+    "python.envFile": "${workspaceFolder}/.env",
+    "python.terminal.activateEnvironment": true,
+    "workbench.startupEditor": "none",
+    "explorer.confirmDragAndDrop": false,
+    "git.autorefresh": true,
+    "jupyter.interactiveWindow.creationMode": "perFile",
+    "notebook.confirmDeleteRunningCell": false,
+    "notebook.lineNumbers": "on",
+    "docsView.documentationView.updateMode": "sticky",
+    "jupyter.askForKernelRestart": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.fontSize": 15,
+    "editor.accessibilitySupport": "off",
+    "files.watcherExclude": {
+        "**/***": true
+    },
+    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    // "terminal.integrated.shell.windows": "C:\\Users\\KL1406\\AppData\\Local\\Programs\\Git\\bin\\bash.exe",
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}/Sysnative/cmd.exe",
+                "${env:windir}/System32/cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "GitBash": {
+            "path": "C:\\Users\\KL1406\\AppData\\Local\\Programs\\Git\\bin\\bash.exe",
+            "icon": "terminal-bash"
+        },
+    },
+    "terminal.integrated.defaultProfile.windows": "GitBash",
+    "files.autoSave": "off",
+    "editor.inlineSuggest.suppressSuggestions": true,
+    "cody.commandCodeLenses": false,
+    "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace",
+    "git.confirmSync": false,
+    "pylint.importStrategy": "fromEnvironment",
+    "git.openRepositoryInParentFolders": "never",
+    "remote.autoForwardPorts": false,
+    "cody.codeActions.enabled": false,
+    "cody.editorTitleCommandIcon": false,
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "[python]": {
+        "diffEditor.ignoreTrimWhitespace": false
+    },
+    "python.languageServer": "Pylance",
+    "remote.tunnels.alwaysUpdateCLI": true,
+    "files.associations": {
+        "/**/models/**/*.sql": "jinja-sql",
+        "/**/macros/**/*.sql": "jinja-sql",
+        "/**/tests/**/*.sql": "jinja-sql",
+        "/**/*.lkml": "lookml",
+        "/**/Code/**/*.sql": "sql",
+        "/**/dbt_project/**/*.sql": "jinja-sql",
+        "*.yml": "yaml",
+        ".env*": "dotenv",
+        "*.css": "tailwindcss"
+    },
+    // "files.associations": {
+    //     "*.sql": "jinja-sql",
+    //     "*.yml": "jinja-yaml"
+    // },
+    "[jinja-sql]": {
+        "editor.defaultFormatter": "henriblancke.vscode-dbt-formatter"
+    },
+    "workbench.iconTheme": "vscode-icons",
+    "redhat.telemetry.enabled": true,
+    "dev.containers.defaultFeatures": {},
+    "editor.smoothScrolling": true,
+    "terminal.integrated.smoothScrolling": true,
+    "workbench.list.smoothScrolling": true,
+    "terminal.integrated.cursorStyle": "underline",
+    "git.fetchOnPull": true,
+    "settingsSync.keybindingsPerPlatform": true,
+    "editor.definitionLinkOpensInPeek": true,
+    "editor.lineHeight": 0,
+    "git-graph.keyboardShortcut.refresh": "UNASSIGNED",
+    "git-graph.openNewTabEditorGroup": "Two",
+    "mssql.connections": [
+        {
+            "server": "DBN002.pinnacle1.org",
+            "database": "XETL",
+            "authenticationType": "Integrated",
+            "profileName": "dev",
+            "encrypt": "Mandatory",
+            "trustServerCertificate": true,
+            "password": ""
+        }
+    ],
+    "mssql.format.datatypeCasing": "uppercase",
+    "mssql.format.keywordCasing": "uppercase",
+    "mssql.format.placeCommasBeforeNextStatement": true,
+    "mssql.format.placeSelectStatementReferencesOnNewLine": true,
+    "mssql.copyIncludeHeaders": true,
+    "mssql.messagesDefaultOpen": false,
+    "window.confirmSaveUntitledWorkspace": false,
+    "workbench.editorAssociations": {
+        "*.xlsx": "cweijan.officeViewer",
+        "*.csv": "default",
+        "{git,gitlens}:/**/*.{md,csv,svg}": "default"
+    },
+    "sqltools.useNodeRuntime": true,
+    "mssql.enableQueryHistoryCapture": false,
+    "sqltools.connections": [
+
+    ],
+    "[sql]": {
+        "editor.defaultFormatter": "mtxr.sqltools"
+    },
+    "poor-mans-t-sql-formatter-pg.std.breakJoinOnSections": true,
+    "poor-mans-t-sql-formatter-pg.std.expandInLists": true,
+    "explorer.confirmDelete": false,
+    "flake8.args": [
+        "--max-line-length=120",
+        "--ignore=E402,E303,E702,F841,F401,E302,E305,E265,E231,E501,E225,W292,W293"
+    ],
+    "leetcode.workspaceFolder": "/Users/luutuankiet/.leetcode",
+    "leetcode.defaultLanguage": "python3",
+    "markdown.preview.fontSize": 15,
+    "leetcode.hint.commandShortcut": false,
+    "leetcode.hint.configWebviewMarkdown": false,
+    "editor.formatOnType": true,
+    "sqltools.highlightQuery": false,
+    "workbench.editorLargeFileConfirmation": 30,
+    "cody.autocomplete.enabled": true,
+    "debug.onTaskErrors": "debugAnyway",
+    "security.workspace.trust.untrustedFiles": "open",
+    "explorer.confirmPasteNative": false,
+    "sqltools.defaultOpenType": "csv",
+    "sqltools.defaultExportType": "csv",
+    "sqltools.disableNodeDetectNotifications": true,
+    "sqltools.disableReleaseNotifications": true,
+    "sqltools.tableTreeItemsExpanded": true,
+    "sqltools.csvExport.quoted": true,
+    "sqltools.csvExport.delimiter": "|",
+    "sqltools.results.reuseTabs": "connection",
+    "explorer.incrementalNaming": "disabled",
+    "cloudcode.project": "selfhost-422514",
+    "cloudcode.autoDependencies": "off",
+    "editor.minimap.enabled": false,
+    "window.zoomPerWindow": true,
+    "window.zoomLevel": -1,
+    "docker.containers.label": "ContainerName",
+    "docker.containers.sortBy": "CreatedTime",
+    "dbt.altimateAiKey": "19f92e471901a481d2474ad12c4808bf",
+    "dbt.altimateInstanceName": "ken",
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "open-folder.showStatusBar": false,
+    "azureRepos.experimental.lfs.read.enabled": false,
+    "workbench.editor.openSideBySideDirection": "down",
+    "workbench.colorTheme": "Bluloco Dark",
+    "remote.tunnels.access.hostNameOverride": "mac",
+    "editor.tokenColorCustomizations": {
+        "textMateRules": []
+    },
+    "dotenv.enableAutocloaking": false,
+    "docker.volumes.groupBy": "None",
+    "docker.volumes.description": [
+        "CreatedTime"
+    ],
+    "docker.volumes.sortBy": "CreatedTime",
+    "docker.containers.description": [
+        "Status"
+    ] // to enable ssh git agent forwarding : https://github.com/microsoft/vscode-remote-release/issues/9662#issuecomment-2010515888
+    // in ssh config, also add these for the above ^^^ to work
+    //     Host github.com
+    //   AddKeysToAgent yes
+    //   UseKeychain yes
+    //   IdentityFile ~/.ssh/id_ed25519
+    // just to be sure, add this to mac : curl -sSL https://gist.github.com/RichardBronosky/429a8fff2687a16959294bcee336dd2a/raw/install.sh | bash
+    ,
+    "terminal.integrated.inheritEnv": true,
+    "githubPullRequests.createOnPublishBranch": "never",
+    "window.titleBarStyle": "native",
+    "vscode_vibrancy.opacity": -1,
+    "terminal.integrated.gpuAcceleration": "off", // for vibrancy
+    "window.autoDetectColorScheme": false, // for vibrancy
+    "vscode-office.editorTheme": "Auto",
+    "window.systemColorTheme": "dark",
+    "vscode_vibrancy.refreshInterval": 10,
+    "vscode_vibrancy.imports": [
+        "/Users/luutuankiet/config-backups/vscode_vibrancy_sticky_scroll.css"
+    ],
+    "workbench.colorCustomizations": {
+        "editorStickyScroll.background": "#2228"
+    },
+    "editor.stickyScroll.maxLineCount": 3,
+    "editor.stickyScroll.enabled": false,
+    // tailwind
+    "tailwindCSS.includeLanguages": {
+        "html": "html",
+        "javascript": "javascript",
+        "css": "css"
+    },
+    "editor.quickSuggestions": {
+        "strings": true
+    },
+    "diffEditor.ignoreTrimWhitespace": true,
+    // schema validations
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "/**/.devcontainer/devcontainer.json"
+            ],
+            "url": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainer.base.schema.json"
+        },
+    ],
+    "remote.SSH.enableAgentForwarding": true,
+    "remote.SSH.useLocalServer": false,
+    "remote.SSH.useExecServer": false,
+    "remote.SSH.remoteServerListenOnSocket": true,
+    "window.customTitleBarVisibility": "auto",
+    "interactiveWindow.executeWithShiftEnter": true,
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "dbt.fileNameTemplateGenerateModel": "{tableName}",
+    "[yaml]": {
+        "diffEditor.ignoreTrimWhitespace": false
+    },
+    "settingsSync.ignoredSettings": [],
+    "diffEditor.hideUnchangedRegions.enabled": true,
+}
