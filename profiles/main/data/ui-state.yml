@@ -299,7 +299,7 @@ workbench.auxiliarybar.placeholderPanels: "[{\"id\":\"workbench.views.service.a\
   Requests\",\"isBuiltin\":true,\"views\":[{\"when\":\"!github:resolvingConflic\
   ts && ReposManagerStateContext != 'NeedsAuthentication'\"}]}]"
 workbench.auxiliaryBar.size: "368"
-workbench.editor.languageDetectionOpenedLanguages.global: '[["python",true],["jinja-sql",true],["dotenv",true],["properties",true],["ssh_config",true],["plaintext",true],["shellscript",true],["yaml",true],["jsonc",true],["json",true],["git-commit",true],["ignore",true]]'
+workbench.editor.languageDetectionOpenedLanguages.global: '[["log",true],["git-commit",true],["python",true],["jinja-sql",true],["json",true],["dotenv",true],["properties",true],["ssh_config",true],["plaintext",true],["shellscript",true],["yaml",true],["jsonc",true]]'
 workbench.explorer.views.state.hidden: '[{"id":"outline","isHidden":false},{"id":"timeline","isHidden":false},{"id":"workbench.explorer.openEditorsView","isHidden":true},{"id":"workbench.explorer.emptyView","isHidden":false},{"id":"npm","isHidden":true},{"id":"workbench.explorer.fileView","isHidden":false,"order":1},{"id":"workbench.scm.repositories","isHidden":true,"order":0},{"id":"github:compareChangesFiles","isHidden":false},{"id":"workbench.view.search","isHidden":false,"order":2}]'
 workbench.grid.size: '{"height":768,"width":1024}'
 workbench.panel.alignment: center
