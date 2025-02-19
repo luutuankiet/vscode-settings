@@ -1,4 +1,4 @@
-globalStorage
-History
-snippets
-workspaceStorage
+*
+!.gitignore
+!keybindings.json
+!settings.json

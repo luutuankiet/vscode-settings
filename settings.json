@@ -12,9 +12,27 @@
         "innoVm": "linux",
         "nas": "linux",
         "gtd": "linux",
-        "mac": "macOS"
+        "mac": "macOS",
+        "JOONS_VM": "linux",
+        "joon": "linux",
+        "192.168.1.9": "linux",
+        "lenovo": "linux",
+        "pi": "linux",
+        "cloudshell": "linux",
+        "nas-local": "linux",
+        "tmp": "macOS",
+        "dbt_cram": "linux",
+        "estrid_tmp": "linux",
+        "estrid_tmp_dev": "linux",
+        "seaco_vm": "linux",
+        "seaco_cloudshell": "linux",
+        "cloudshell_joon": "linux",
+        "ticktick_dev": "linux"
     },
-    "terminal.integrated.enableMultiLinePasteWarning": false,
+    // ==================================================================
+    // ===========   python & terminal  ===========================
+    // ==================================================================
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
     "terminal.integrated.env.osx": {
         "PYTHONPATH": "${env:PYTHONPATH}",
     },
@@ -24,12 +42,12 @@
     "terminal.integrated.env.windows": {
         "PYTHONPATH": "${env:PYTHONPATH}",
     },
-    "python.defaultInterpreterPath": ".venv/bin/python",
-    "python.venvFolders": [
-        "${workspaceFolder}/.venv"
-    ],
     "python.envFile": "${workspaceFolder}/.env",
     "python.terminal.activateEnvironment": true,
+    "terminal.integrated.inheritEnv": true,
+    // ==================================================================
+    // ===========   END python & terminal  ===========================
+    // ==================================================================
     "workbench.startupEditor": "none",
     "explorer.confirmDragAndDrop": false,
     "git.autorefresh": true,
@@ -39,7 +57,6 @@
     "docsView.documentationView.updateMode": "sticky",
     "jupyter.askForKernelRestart": false,
     "editor.unicodeHighlight.invisibleCharacters": false,
-    "editor.fontSize": 15,
     "editor.accessibilitySupport": "off",
     "files.watcherExclude": {
         "**/***": true
@@ -79,9 +96,13 @@
     "git.enableSmartCommit": true,
     "git.autofetch": true,
     "[python]": {
-        "diffEditor.ignoreTrimWhitespace": false
+        "diffEditor.ignoreTrimWhitespace": false,
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
+        "editor.defaultFormatter": "ms-python.black-formatter"
     },
     "python.languageServer": "Pylance",
+    "python.analysis.typeCheckingMode": "standard",
     "remote.tunnels.alwaysUpdateCLI": true,
     "files.associations": {
         "/**/models/**/*.sql": "jinja-sql",
@@ -92,19 +113,20 @@
         "/**/dbt_project/**/*.sql": "jinja-sql",
         "*.yml": "yaml",
         ".env*": "dotenv",
-        "*.css": "tailwindcss"
+        "*.css": "tailwindcss",
+        "*.bqsql": "sql-bigquery",
+        "*.sql": "sql",
+        "/**/.github/**/*.yml": "github-actions-workflow"
     },
     // "files.associations": {
     //     "*.sql": "jinja-sql",
     //     "*.yml": "jinja-yaml"
     // },
     "[jinja-sql]": {
-        "editor.defaultFormatter": "henriblancke.vscode-dbt-formatter"
+        "editor.defaultFormatter": "innoverio.vscode-dbt-power-user"
     },
-    "workbench.iconTheme": "vscode-icons",
     "redhat.telemetry.enabled": true,
     "dev.containers.defaultFeatures": {},
-    "editor.smoothScrolling": true,
     "terminal.integrated.smoothScrolling": true,
     "workbench.list.smoothScrolling": true,
     "terminal.integrated.cursorStyle": "underline",
@@ -113,7 +135,6 @@
     "editor.definitionLinkOpensInPeek": true,
     "editor.lineHeight": 0,
     "git-graph.keyboardShortcut.refresh": "UNASSIGNED",
-    "git-graph.openNewTabEditorGroup": "Two",
     "mssql.connections": [
         {
             "server": "DBN002.pinnacle1.org",
@@ -135,12 +156,21 @@
     "workbench.editorAssociations": {
         "*.xlsx": "cweijan.officeViewer",
         "*.csv": "default",
-        "{git,gitlens}:/**/*.{md,csv,svg}": "default"
+        "*.md": "default",
+        "{git,gitlens,git-graph}:/**/*.{md,csv,svg}": "default"
     },
     "sqltools.useNodeRuntime": true,
     "mssql.enableQueryHistoryCapture": false,
     "sqltools.connections": [
-
+        {
+            "previewLimit": 50,
+            "server": "boyluu0819.ddns.net",
+            "port": 5433,
+            "driver": "PostgreSQL",
+            "name": "gtd",
+            "database": "gtd_dash",
+            "username": "ken"
+        }
     ],
     "[sql]": {
         "editor.defaultFormatter": "mtxr.sqltools"
@@ -173,22 +203,17 @@
     "sqltools.csvExport.delimiter": "|",
     "sqltools.results.reuseTabs": "connection",
     "explorer.incrementalNaming": "disabled",
-    "cloudcode.project": "selfhost-422514",
+    "cloudcode.project": "joon-4-joon",
     "cloudcode.autoDependencies": "off",
-    "editor.minimap.enabled": false,
     "window.zoomPerWindow": true,
-    "window.zoomLevel": -1,
     "docker.containers.label": "ContainerName",
     "docker.containers.sortBy": "CreatedTime",
     "dbt.altimateAiKey": "19f92e471901a481d2474ad12c4808bf",
-    "dbt.altimateInstanceName": "ken",
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "open-folder.showStatusBar": false,
     "azureRepos.experimental.lfs.read.enabled": false,
-    "workbench.editor.openSideBySideDirection": "down",
-    "workbench.colorTheme": "Bluloco Dark",
     "remote.tunnels.access.hostNameOverride": "mac",
     "editor.tokenColorCustomizations": {
         "textMateRules": []
@@ -209,20 +234,20 @@
     //   IdentityFile ~/.ssh/id_ed25519
     // just to be sure, add this to mac : curl -sSL https://gist.github.com/RichardBronosky/429a8fff2687a16959294bcee336dd2a/raw/install.sh | bash
     ,
-    "terminal.integrated.inheritEnv": true,
     "githubPullRequests.createOnPublishBranch": "never",
     "window.titleBarStyle": "native",
     "vscode_vibrancy.opacity": -1,
     "terminal.integrated.gpuAcceleration": "off", // for vibrancy
     "window.autoDetectColorScheme": false, // for vibrancy
-    "vscode-office.editorTheme": "Auto",
+    "vscode-office.editorTheme": "Light",
     "window.systemColorTheme": "dark",
     "vscode_vibrancy.refreshInterval": 10,
     "vscode_vibrancy.imports": [
         "/Users/luutuankiet/config-backups/vscode_vibrancy_sticky_scroll.css"
     ],
     "workbench.colorCustomizations": {
-        "editorStickyScroll.background": "#2228"
+        "editorStickyScroll.background": "#2228",
+        "terminal.background": "#00000000"
     },
     "editor.stickyScroll.maxLineCount": 3,
     "editor.stickyScroll.enabled": false,
@@ -235,7 +260,7 @@
     "editor.quickSuggestions": {
         "strings": true
     },
-    "diffEditor.ignoreTrimWhitespace": true,
+    "diffEditor.ignoreTrimWhitespace": false,
     // schema validations
     "json.schemas": [
         {
@@ -245,10 +270,8 @@
             "url": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainer.base.schema.json"
         },
     ],
-    "remote.SSH.enableAgentForwarding": true,
-    "remote.SSH.useLocalServer": false,
-    "remote.SSH.useExecServer": false,
-    "remote.SSH.remoteServerListenOnSocket": true,
+    "terminal.integrated.persistentSessionReviveProcess": "never",
+    "terminal.integrated.enablePersistentSessions": false,
     "window.customTitleBarVisibility": "auto",
     "interactiveWindow.executeWithShiftEnter": true,
     "[json]": {
@@ -258,6 +281,189 @@
     "[yaml]": {
         "diffEditor.ignoreTrimWhitespace": false
     },
-    "settingsSync.ignoredSettings": [],
+    "syncSettings.resources": [
+        "keybindings",
+        "settings",
+        "snippets",
+        "uiState"
+    ],
+    // "syncSettings.resources": ["extensions", "keybindings", "settings", "snippets", "uiState"],
+    "workbench.editor.empty.hint": "hidden",
+    "bigqueryRunner.projectId": "joon-sandbox",
+    "bigqueryRunner.extensions": [
+        ".bqsql",
+        ".bqddl",
+        ".bqdml",
+        ".bigquery"
+    ],
+    "workbench.editor.pinnedTabsOnSeparateRow": true,
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.editor.wrapTabs": true,
+    "[sql-bigquery]": {
+        "editor.defaultFormatter": "ReneSaarsoo.sql-formatter-vsc"
+    },
+    "bigqueryRunner.statusBarItem.align": "right",
+    "bqExtensionVSCode.trace.server": "verbose",
+    "debefy.data-dancer.locale": "en-US",
+    "bigqueryRunner.tree.projectIds": [
+        "one-global-looker-prod",
+        "joon-sandbox"
+    ],
+    "bigqueryRunner.downloader.csv.header": true,
+    "bigqueryRunner.maximumBytesBilled": "10GB",
+    "indentRainbow.excludedLanguages": [
+        "dynamic csv",
+        "plaintext"
+    ],
+    "rainbow_csv.enable_context_menu_head": true,
+    "rainbow_csv.enable_context_menu_tail": true,
+    "workbench.settings.applyToAllProfiles": [
+        "workbench.colorCustomizations"
+    ],
+    // ==================================================================
+    // ===========    settings for SSH agents ===========================
+    // ==================================================================
+    "remote.SSH.enableAgentForwarding": true,
+    "remote.SSH.useLocalServer": false,
+    "remote.SSH.useExecServer": false,
+    "remote.SSH.remoteServerListenOnSocket": true,
+    "peacock.favoriteColors": [
+        {
+            "name": "Angular Red",
+            "value": "#dd0531"
+        },
+        {
+            "name": "Azure Blue",
+            "value": "#007fff"
+        },
+        {
+            "name": "JavaScript Yellow",
+            "value": "#f9e64f"
+        },
+        {
+            "name": "Mandalorian Blue",
+            "value": "#1857a4"
+        },
+        {
+            "name": "Node Green",
+            "value": "#215732"
+        },
+        {
+            "name": "React Blue",
+            "value": "#61dafb"
+        },
+        {
+            "name": "Something Different",
+            "value": "#832561"
+        },
+        {
+            "name": "Svelte Orange",
+            "value": "#ff3d00"
+        },
+        {
+            "name": "Vue Green",
+            "value": "#42b883"
+        },
+        {
+            "name": "red",
+            "value": "#831f25"
+        }
+    ],
+    "githubPullRequests.pushBranch": "always",
+    "docker.volumes.label": "VolumeName",
+    "githubPullRequests.pullBranch": "never",
+    "workbench.iconTheme": "vscode-icons",
+    "gitlens.advanced.messages": {
+        "suppressGitDisabledWarning": true,
+        "suppressGitMissingWarning": true
+    },
+    "dbt.perspectiveTheme": "Monokai",
+    "dbt.enableNewLineagePanel": true,
+    "errorLens.enabledDiagnosticLevels": [
+        "error",
+        "info"
+    ],
+    "[shellscript]": {
+        "editor.defaultFormatter": "mads-hartmann.bash-ide-vscode"
+    },
+    "textIndentHighlighter.colors": [
+        "#dc8580",
+        "#f2e6b1",
+        "#95dab6",
+        "#83b2d0",
+        "#7f87b2"
+    ],
+    "githubPullRequests.fileListLayout": "tree",
+    "workbench.editor.restoreViewState": false,
+    "files.restoreUndoStack": false,
+    "[git-rebase]": {
+        "workbench.editor.restoreViewState": false
+    },
+    "dbt.altimateInstanceName": "ken",
+    // paste these to remote machine / workspace to allow host-based ssh 
+    // "remote.SSH.enableAgentForwarding": false,
+    // "remote.SSH.useLocalServer": true,
+    // "remote.SSH.useExecServer": true,
+    // "remote.SSH.remoteServerListenOnSocket": false
+    // markdown dir settings
+    "markdown.copyFiles.destination": {
+        "**/*": "assets/${documentBaseName}/"
+    },
+    "[github-actions-workflow]": {},
+    "vsicons.dontShowNewVersionMessage": true,
+    "extensions.ignoreRecommendations": true,
+    // workbench editor screens settings
+    "workbench.editor.openSideBySideDirection": "right", // up/down
+    "settingsSync.ignoredSettings": [
+        "editor.minimap.autohide",
+        "editor.minimap.enabled",
+        "workbench.iconTheme",
+        "-window.zoomLevel",
+        "workbench.colorTheme"
+    ],
+    // TODO:  something to look into; typescript bogs my machien down
+    "typescript.validate.enable": false,
+    "javascript.validate.enable": false,
+    "javascript.suggestionActions.enabled": false,
+    "typescript.suggestionActions.enabled": false,
+    "typescript.tsc.autoDetect": "off",
+    "vsicons.presets.jsonOfficial": true,
+    "editor.smoothScrolling": true,
+    "editor.minimap.showSlider": "always",
+    "editor.minimap.renderCharacters": false,
+    "chat.commandCenter.enabled": false,
+    "editor.minimap.size": "fill",
+    "cody.chat.preInstruction": "i am learning to code for data engineering. my langauges of interest are sql python bash powershell c#. i am a beginner. i am interested in making scripts for automation. also I am very interested to learn object oriented programming and its application whenever possible. when you repond, please always google first before resplying. whenever there is code related, give me step by step example down to how each variable is used, is updated along the codeline, give the expected variable value in comments so that i dont have to execute to find out; also printing the manual of what syntax is being used. whenever possible give equivalent in other code i am learning. and provide a the best practice solution or concept that data engineers do to solve such problem in pragmatic ways. also when i give additional tables or dataframes or raw data in the question please by default assume that i already have it imported, so no need to include the actual initialization of the table or df in the response so as not to make it too long. whenever possible give me a case study explaination, the context why all the way to implement the outcome. in your answer organize it this way : skip any intro context to the bottom, provide answer directly; i.e. if it is coding related just give the code then contexts comes after, no need for wordy introduction, go straight to the code. please mention if this has been discussed or explained previously in this chat thread. please also give info on what does it do, how does it work in relation to other components in this repo, most importantly to its dependencies or anything depends on it; print out the specific lines snippets in those dependencies to help me review in one central place. give specific examples to expand on what does it do, other scenarios that we can particularly use that same kind of syntax, or relevant python snippets. walk me through line by line syntax by syntax to be as detailed as possible. point out the relationships because that is what helps me learn. If I request you to repond in markdown,only a single literal set of ```md ``` tripple backtick, no other tripple backticks in your entire answer - in other words do not include any tripple backticks blocks except for the outermost markdown ```.",
+    "workbench.colorTheme": "Bluloco Dark",
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "terminal.integrated.cursorBlinking": true,
+    "diffEditor.useInlineViewWhenSpaceIsLimited": false,
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "window.commandCenter": false,
+    "workbench.layoutControl.enabled": false,
+    "editor.minimap.autohide": true,
+    "[markdown]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+    "cody.debug.verbose": true,
+    "editor.minimap.enabled": false,
+    "postman.settings.dotenv-detection-notification-visibility": false,
+    "cody.commandHints.enabled": false,
+    "window.menuBarVisibility": "toggle",
+    "geminicodeassist.project": "",
+    "editor.fontSize": 14,
+    "window.zoomLevel": 1,
+    "git-graph.commitDetailsView.location": "Docked to Bottom",
+    "git-graph.openNewTabEditorGroup": "Beside",
     "diffEditor.hideUnchangedRegions.enabled": true,
+    "diffEditor.renderSideBySide": true,
+    "vscode-office.openOutline": false,
+    "javascript.updateImportsOnFileMove.enabled": "always"
 }
